@@ -19,7 +19,7 @@ devices = {
 for key, val  in devices.items():
     connections[key]=(ConnectHandler(host = key, **val))
 
-for connection in connections:
+for connection, _  in connections.items():
     print(connections[connection].find_prompt())
 
 connections["nxos1.lasthop.io"].send_command("show version")
