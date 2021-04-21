@@ -1,28 +1,25 @@
 from netmiko import ConnectHandler
 from getpass import getpass
 
-connections = []
-devices = [
-    {
-        "host" : 'nxos1.lasthop.io',
+connections = {}
+devices = { 
+    "nxos1.lasthop.io" : {
         "username" : 'pyclass',
         "password" : getpass(),
         "device_type" : 'cisco_nxos',
         "session_log" : 'connection.txt',
     },
-    {
-        "host" : 'nxos2.lasthop.io',
+    "nxos2.lasthop.io" : {
         "username" : 'pyclass',
         "password" : getpass(),
         "device_type" : 'cisco_nxos',
     }
-]
+}
 
-for dev in devices:
-    connections.append(ConnectHandler(**dev))
+for key, val  in devices.items():
+    connections[key]=(ConnectHandler(host = key, **val))
 
 for connection in connections:
-    print(connection.find_prompt())
+    print(connections[connection].find_prompt())
 
-connections[0].send_command("show version")
-
+connections["nxos1.lasthop.io"].send_command("show version")

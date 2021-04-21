@@ -29,8 +29,13 @@ http://www.gnu.org/licenses/lgpl.html
 ***************************************************************************
 
 nxos1# terminal width 511
+terminal length 0
 
 nxos1# terminal length 0
+
+nxos1# 
+
+nxos1# 
 nxos1# 
 nxos1# 
 nxos1# 
@@ -69,7 +74,7 @@ Hardware
 
   Device name: nxos1
   bootflash:    3509454 kB
-Kernel uptime is 14 day(s), 15 hour(s), 16 minute(s), 42 second(s)
+Kernel uptime is 14 day(s), 16 hour(s), 6 minute(s), 21 second(s)
 
 Last reset 
   Reason: Unknown
