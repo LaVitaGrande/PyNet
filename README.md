@@ -1,7 +1,1 @@
-# PyNet
-
-## change on AWS
-
-### and
-
-## Change on github
+# Working on projects for KTB advanced python automation class

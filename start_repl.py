@@ -13,3 +13,8 @@ for name, values in devices.items():
     else:
         print(name + " has no connection")
 
+def cleanup():
+    for device in devices.values():
+        if device['conn']:
+            device['conn'].disconnect()
+
